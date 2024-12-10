@@ -27,11 +27,11 @@ const ShopContextProvider = (itemsForSale) => {
 // },[])
 
 const setAll_Products = () => {
-  fetch("https://mern-shop-backend-ol7q.onrender.com/allproducts") 
+  fetch("https://mern-shop-backend-od9z.onrender.com/allproducts") 
 .then((res)=> res.json())
 .then((data)=>setAll_Products(data))
 if(localStorage.getItem("auth-token")){
-  fetch("https://mern-shop-backend-ol7q.onrender.com/getcart", {
+  fetch("https://mern-shop-backend-od9z.onrender.com/getcart", {
     method: "POST",
     headers: {
       Accept: "application/form-data",
@@ -97,7 +97,7 @@ setCartItems((prev) => ({
   quantity: (prev[itemId]?.quantity || 0 ) + 1, 
  size:selectedSize}, }))
 if(localStorage.getItem("auth-token")){
-  fetch("https://mern-shop-backend-ol7q.onrender.com/addtocart", {
+  fetch("https://mern-shop-backend-od9z.onrender.com/addtocart", {
     method: "POST",
     headers: {
       Accept: "application/form-data",
@@ -116,7 +116,7 @@ if(localStorage.getItem("auth-token")){
 const removeFromCart = (itemId) => {
   setCartItems((prev) => ({...prev,[itemId]:prev[itemId]-1}))
   if(localStorage.getItem("auth-token")){
-    fetch("https://mern-shop-backend-ol7q.onrender.com/removefromcart", {
+    fetch("https://mern-shop-backend-od9z.onrender.com/removefromcart", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -131,7 +131,7 @@ const removeFromCart = (itemId) => {
   }
 
   const checkout = () => {
-    fetch("https://mern-shop-backend-ol7q.onrender.com/create-checkout-session", {
+    fetch("https://mern-shop-backend-od9z.onrender.com/create-checkout-session", {
       method:"POST",
       headers:{
         "Content-Type":"application/json"
