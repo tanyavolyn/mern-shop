@@ -32,7 +32,7 @@ function Gallery (){
         }))
     }
 return(
-    <div className="galerycontainer" key={id}>
+    <section className="galerycontainer" key={id}>
 
 
 <img  className="galbild" src={image}  alt="Bild"/>
@@ -48,7 +48,7 @@ return(
             </div>
         
 
-    </div>
+    </section>
 )
 }
 

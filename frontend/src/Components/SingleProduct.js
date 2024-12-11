@@ -9,7 +9,7 @@ const [selectedOption, setSelectedOption] = useState("S");
 console.log(selectedOption)
 
  return (
-    <div className="container-singleproduct">
+    <section className="container-singleproduct">
       <div className="productdisplay-left">
   
     
@@ -43,7 +43,7 @@ console.log(selectedOption)
       
       </div>
     
-    </div>
+    </section>
   );
 };
 

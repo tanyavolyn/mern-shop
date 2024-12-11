@@ -43,11 +43,11 @@ AOS.init({duration:1000})
   return (
     <div className="box">
 
-    <header data-aos="fade-down">
+    <div data-aos="fade-down">
 
 
     <Router>
-      <div className="container">
+      <header className="container">
     <div >
     <Link className="titel" to="/"><h1>All for you</h1></Link>
    </div>
@@ -66,7 +66,8 @@ AOS.init({duration:1000})
   <LoginCartButton/>
 
    </div>
-   </div>
+   </header>
+   
    <Routes>
     <Route path="/" element={<Gallery/>}/>
     <Route path="/shop" element={<Shop/>}/>
@@ -88,7 +89,7 @@ AOS.init({duration:1000})
 
 
 
-   </header>
+   </div>
 
    
 <footer>
